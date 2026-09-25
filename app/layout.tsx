@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { BottomNav, TopNav } from "@/components/app-nav";
+import { BottomNav, TopNav, UserBox } from "@/components/app-nav";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,7 +25,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             >
               Учёт офисов
             </Link>
-            <TopNav />
+            <div className="flex flex-1 items-center justify-between gap-6">
+              <TopNav />
+              <UserBox />
+            </div>
           </div>
         </header>
         <main className="mx-auto w-full max-w-5xl px-4 py-6 pb-24 md:px-6 md:py-8 md:pb-8">
